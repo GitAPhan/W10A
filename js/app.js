@@ -25,3 +25,24 @@ for (i = 0; i < disable_click.length; i++) {
     disable_click[i].style.pointerEvents = 'none';
 }
 
+// create and add new a tag in body
+var new_link = document.createElement('a');
+document.body.append(new_link);
+new_link.innerText = 'Hey There!';
+new_link.href = '#';
+
+// assigned the a tag a class
+new_link.className = 'blue';
+
+// changed all blue classes to red
+var blue_class = document.getElementsByClassName('blue');
+// did not add counter because when the class is replaced the element is removed from list
+for (i = 0; i < blue_class.length;) {
+    blue_class[i].classList.replace('blue','red');
+}
+
+// added red class to store_name
+var store_name = document.getElementById('store_name');
+store_name.classList.add('red');
+
+
