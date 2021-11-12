@@ -1,4 +1,9 @@
-
+// function to add '!' when button is clicked
+function addTextNode(text) {
+    var newtext = document.createTextNode(text);
+    var store_name = document.getElementById('store_name');
+    store_name.appendChild(newtext);
+}
 
 // set to be in the background and fill viewport
 var image = document.querySelector('img');
@@ -45,4 +50,25 @@ for (i = 0; i < blue_class.length;) {
 var store_name = document.getElementById('store_name');
 store_name.classList.add('red');
 
+// took all elements with class 'animate_me' and toggled red
+var lets_make_everything_red = document.getElementsByClassName('animate_me');
+for (i=0; i<lets_make_everything_red.length;i++) {
+    lets_make_everything_red[i].classList.toggle('red');
+}
 
+
+// changed all red classes to red text
+var red_text = document.getElementsByClassName('red');
+for (i = 0; i < red_text.length; i++) {
+    red_text[i].style.color = 'red';
+}
+
+// removed an unnecessary tag
+var useless_tag = document.getElementsByClassName('bold');
+for (i=0; i<useless_tag.length;) {
+useless_tag[i].classList.remove('bold');
+}
+
+// can't be my project if there is not an absorbant amount of red.
+// removed the last element that isn't red
+document.body.removeChild(document.body.children[0]);
